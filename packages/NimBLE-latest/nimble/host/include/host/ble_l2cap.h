@@ -28,10 +28,12 @@ extern "C" {
 struct ble_l2cap_sig_update_req;
 struct ble_hs_conn;
 
+// L2CAP Channel ID
 #define BLE_L2CAP_CID_ATT           4
 #define BLE_L2CAP_CID_SIG           5
 #define BLE_L2CAP_CID_SM            6
 
+// L2CAP LE Signaling channel 信令通道
 #define BLE_L2CAP_SIG_OP_REJECT                 0x01
 #define BLE_L2CAP_SIG_OP_CONNECT_REQ            0x02
 #define BLE_L2CAP_SIG_OP_CONNECT_RSP            0x03
@@ -60,6 +62,8 @@ struct ble_hs_conn;
 #define BLE_L2CAP_SIG_ERR_MTU_EXCEEDED          0x0001
 #define BLE_L2CAP_SIG_ERR_INVALID_CID           0x0002
 
+// 参考 Vol 3, Part A, 4.23 LE CREDIT BASED CONNECTION RESPONSE (CODE 0x15)
+// COC : Connection-oriented channel
 #define BLE_L2CAP_COC_ERR_CONNECTION_SUCCESS        0x0000
 #define BLE_L2CAP_COC_ERR_UNKNOWN_LE_PSM            0x0002
 #define BLE_L2CAP_COC_ERR_NO_RESOURCES              0x0004
